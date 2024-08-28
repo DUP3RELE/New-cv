@@ -6,6 +6,8 @@ html,
 	padding: 0;
 	height: 100%;
 	width: 100%;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll hidden;
 }
 
 .section {
@@ -15,7 +17,55 @@ html,
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 20px;
+	scroll-snap-align: start;
+	position: relative;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.section.active {
+	opacity: 1;
+}
+
+.scroll-animation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bar {
+	width: 25%;
+	height: 100%;
+	background-color: red;
+	animation: slide-up 1s forwards;
+}
+
+.bar:nth-child(odd) {
+	background-color: blue;
+	animation: slide-down 1s forwards;
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
 }
 
 .home {
@@ -28,4 +78,8 @@ html,
 
 .contact {
 	background-color: #d0d0d0;
+}
+.section.active h1,
+.section.active p {
+	opacity: 1;
 }
