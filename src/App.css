@@ -19,67 +19,22 @@ html,
 	text-align: center;
 	scroll-snap-align: start;
 	position: relative;
-	opacity: 0;
-	transition: opacity 1s ease-in-out;
-}
-
-.section.active {
-	opacity: 1;
-}
-
-.scroll-animation {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.bar {
-	width: 25%;
-	height: 100%;
-	background-color: red;
-	animation: slide-up 1s forwards;
-}
-
-.bar:nth-child(odd) {
-	background-color: blue;
-	animation: slide-down 1s forwards;
-}
-
-@keyframes slide-up {
-	0% {
-		transform: translateY(100%);
-	}
-	100% {
-		transform: translateY(-100%);
-	}
-}
-
-@keyframes slide-down {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
 }
 
 .home {
-	background-color: #f0f0f0;
+	background-color: #402e7a;
 }
 
 .projects {
-	background-color: #e0e0e0;
+	background-color: #4c3bcf;
 }
 
 .contact {
-	background-color: #d0d0d0;
+	background-color: #402e7a;
 }
-.section.active h1,
-.section.active p {
-	opacity: 1;
+.primary {
+	color: #4b70f5;
+}
+.secondary {
+	color: #3dc2ec;
 }
