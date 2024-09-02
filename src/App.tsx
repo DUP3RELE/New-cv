@@ -1,8 +1,8 @@
 import "./App.css";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Home from "./sections/Home";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 export default function App(): any {
 	return (
