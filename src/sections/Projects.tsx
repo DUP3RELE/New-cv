@@ -1,44 +1,32 @@
-import React, { useRef, useEffect } from "react";
-import "../App.css";
+import Card from "../components/Card";
 
-export default function Projects(): any {
-	const cardsContainerRef = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		const handleMouseMove = (e: MouseEvent) => {
-			if (cardsContainerRef.current) {
-				const cards = Array.from(
-					cardsContainerRef.current.getElementsByClassName("card")
-				) as HTMLElement[];
-
-				cards.forEach((card) => {
-					const rect = card.getBoundingClientRect();
-					const x = e.clientX - rect.left;
-					const y = e.clientY - rect.top;
-
-					card.style.setProperty("--mouse-x", `${x}px`);
-					card.style.setProperty("--mouse-y", `${y}px`);
-				});
-			}
-		};
-
-		const container = cardsContainerRef.current;
-		container?.addEventListener("mousemove", handleMouseMove);
-
-		return () => {
-			container?.removeEventListener("mousemove", handleMouseMove);
-		};
-	}, []);
+export default function Projects() {
+	const cardData = [
+		{
+			title: "Projekt 1",
+			content: "Content for card 1",
+		},
+		{
+			title: "Card 2 Title",
+			content: "Content for card 2",
+		},
+		{
+			title: "Card 3 Title",
+			content: "Content for card 3",
+		},
+	];
 
 	return (
 		<section className='section projects'>
+			<h1 className='title1'>PROJEKTY</h1>
 			<div id='cards'>
-				<div className='card'></div>
-				<div className='card'></div>
-				<div className='card'></div>
-				<div className='card'></div>
-				<div className='card'></div>
-				<div className='card'></div>
+				{cardData.map((data, index) => (
+					<Card
+						key={index}
+						title={data.title}
+						content={data.content}
+					/>
+				))}
 			</div>
 		</section>
 	);

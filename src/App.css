@@ -22,6 +22,26 @@ html,
 	position: relative;
 }
 
+.divider1 {
+	height: 20vh;
+	width: 100%;
+	background: linear-gradient(to bottom, black, #080521);
+}
+
+.title1 {
+	position: absolute;
+	color: white;
+	font-size: 40px;
+	top: 50px;
+	left: 100px;
+}
+.title2 {
+	position: absolute;
+	color: white;
+	font-size: 40px;
+	bottom: 50px;
+	right: 100px;
+}
 .home {
 	background-color: black;
 }
@@ -29,7 +49,7 @@ html,
 .projects {
 	display: flex;
 	align-items: center;
-	background-color: #4c3bcf;
+	background-color: #080521;
 	justify-content: center;
 }
 
@@ -45,52 +65,14 @@ html,
 
 #cards {
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: 10px;
 	min-width: 916px;
 	width: calc(100% - 20px);
 }
-
-.card {
-	background-color: #402e7a;
-	border: 1px solid #4b70f5;
-	border-radius: 10px;
-	cursor: pointer;
-	height: 260px;
+.card-content {
 	position: relative;
-	width: 300px;
-	animation: appear linear;
-	animation-timeline: view();
-	animation-range: entry 0;
-}
-.card:hover::before {
-	opacity: 1;
-}
-.card::before {
-	background: radial-gradient(
-		800px circle at var(--mouse-x) var(--mouse-y),
-		#3dc2ec,
-		transparent 40%
-	);
-	border-radius: inherit;
-	content: "";
-	height: 100%;
-	left: 0px;
-	opacity: 0;
-	position: absolute;
-	top: 0px;
-	transition: opacity 500ms;
-	width: 100%;
-	z-index: 2;
-}
-
-@keyframes appear {
-	from {
-		opacity: 0;
-		scale: 0.5;
-	}
-	to {
-		opacity: 1;
-		scale: 1;
-	}
+	justify-content: center;
+	align-items: center;
 }
