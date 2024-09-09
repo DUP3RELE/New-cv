@@ -26,17 +26,24 @@ const Card: React.FC<CardProps> = ({ title, content }) => {
 
 	const cardStyle: React.CSSProperties = {
 		position: "relative",
+		justifyContent: "center",
+		alignItems: "center",
+		display: "flex",
 		width: "300px",
 		height: "260px",
 		color: "white",
-		backgroundColor: "rgba(0, 0, 64, 0.7)",
+		backgroundImage: "linear-gradient(144deg,#402e7a, #5B42F3 50%,#4b70f5)",
 		borderRadius: "10px",
+		boxShadow: "rgba(151, 65, 252, 0.2) 0 15px 30px -5px",
+		boxSizing: "border-box",
 		cursor: "pointer",
 		overflow: "hidden",
+		maxWidth: "100%",
+		minWidth: "140px",
 	};
 
 	const beforeStyle: React.CSSProperties = {
-		background: `radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 238, 182, 0.6), transparent 40%)`,
+		background: `radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, #3dc2ec, transparent 40%)`,
 		borderRadius: "inherit",
 		content: '""',
 		height: "100%",
