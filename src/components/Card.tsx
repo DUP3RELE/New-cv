@@ -3,8 +3,9 @@ import React, { useState } from "react";
 interface CardProps {
 	title: string;
 	content: string;
+	onCardClick: () => void;
 }
-const Card: React.FC<CardProps> = ({ title, content }) => {
+const Card: React.FC<CardProps> = ({ title, content, onCardClick }) => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -64,6 +65,7 @@ const Card: React.FC<CardProps> = ({ title, content }) => {
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			style={cardStyle}
+			onClick={onCardClick}
 		>
 			<div style={beforeStyle}></div>
 			<div className='card-content'>
