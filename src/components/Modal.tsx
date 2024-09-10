@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Xcircle from "../icons/x-circle.svg";
 
 interface ModalProps {
 	isVisible: boolean;
@@ -31,7 +32,13 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
 					className='modal-close-button'
 					onClick={() => onClose()}
 				>
-					Zamknij
+					<img
+                    className="rotate-svg"
+						src={Xcircle}
+						alt='My Icon'
+						width={25}
+						height={25}
+					/>
 				</button>
 				{children}
 			</div>
