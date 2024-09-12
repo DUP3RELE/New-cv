@@ -5,8 +5,8 @@ interface CardData {
 	id: number;
 	title: string;
 	description: string;
-	technologies: string[]; // Lista technologii
-	links: { label: string; url: string }[]; // Lista linków
+	technologies: string[];
+	links: { label: string; url: string }[];
 }
 
 export default function Projects() {
@@ -64,13 +64,12 @@ export default function Projects() {
 					<Card
 						key={data.id}
 						title={data.title}
-						content={data.description} // Przekazujemy krótki opis do karty
+						content={data.description}
 						onCardClick={() => handleCardClick(data)}
 					/>
 				))}
 			</div>
 
-			{/* Modal */}
 			<Modal
 				isVisible={isModalVisible}
 				onClose={handleCloseModal}
