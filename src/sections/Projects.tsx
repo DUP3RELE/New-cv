@@ -77,27 +77,35 @@ export default function Projects() {
 				{selectedCard && (
 					<div>
 						<h2>{selectedCard.title}</h2>
-						<p>{selectedCard.description}</p>
-						<h4>Technologie:</h4>
-						<ul>
-							{selectedCard.technologies.map((tech, index) => (
-								<li key={index}>{tech}</li>
-							))}
-						</ul>
-						<h4>Linki:</h4>
-						<ul>
-							{selectedCard.links.map((link, index) => (
-								<li key={index}>
-									<a
-										href={link.url}
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										{link.label}
-									</a>
-								</li>
-							))}
-						</ul>
+						<div>
+							<p>{selectedCard.description}</p>
+						</div>
+						<div>
+							<div>
+								<h4>Technologie:</h4>
+								<ul>
+									{selectedCard.technologies.map((tech, index) => (
+										<li key={index}>{tech}</li>
+									))}
+								</ul>
+							</div>
+							<div>
+								<h4>Linki:</h4>
+								<ul>
+									{selectedCard.links.map((link, index) => (
+										<li key={index}>
+											<a
+												href={link.url}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												{link.label}
+											</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
 					</div>
 				)}
 			</Modal>
