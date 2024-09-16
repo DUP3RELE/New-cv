@@ -75,13 +75,13 @@ export default function Projects() {
 				onClose={handleCloseModal}
 			>
 				{selectedCard && (
-					<div>
+					<div className='modal-container'>
 						<h2>{selectedCard.title}</h2>
-						<div>
+						<div className='modal-container__1'>
 							<p>{selectedCard.description}</p>
 						</div>
-						<div>
-							<div>
+						<div className="second-third-wrapper">
+							<div className='modal-container__2'>
 								<h4>Technologie:</h4>
 								<ul>
 									{selectedCard.technologies.map((tech, index) => (
@@ -89,7 +89,7 @@ export default function Projects() {
 									))}
 								</ul>
 							</div>
-							<div>
+							<div className='modal-container__3'>
 								<h4>Linki:</h4>
 								<ul>
 									{selectedCard.links.map((link, index) => (
