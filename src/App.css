@@ -34,6 +34,7 @@ html,
 	font-size: 40px;
 	top: 50px;
 	left: 100px;
+	font-weight: 200;
 }
 .title2 {
 	position: absolute;
@@ -41,6 +42,7 @@ html,
 	font-size: 40px;
 	bottom: 50px;
 	right: 100px;
+	font-weight: 200;
 }
 .home {
 	background-color: black;
@@ -144,6 +146,7 @@ html,
 }
 .second-third-wrapper {
 	position: absolute;
+	display: flex;
 	width: 95%;
 	margin: 5px;
 	margin-bottom: 25px;
@@ -151,17 +154,46 @@ html,
 	background-color: #fff;
 }
 .modal-container__2 {
-	background-color: lightgreen;
-	width: 50%;
-	text-align: center;
+	background-color: gray;
+	margin: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	border: 1px solid black;
+	width: 30%;
 }
 .modal-container__3 {
-	background-color: lightcoral;
-	width: 50%;
-	text-align: center;
+	background-color: gray;
+	margin: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	border: 1px solid black;
+	width: 30%;
+}
+.iconStyle {
+	padding: 2px;
+	margin: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: whitesmoke;
 }
 .rotate-svg {
 	animation: rotate 2s linear infinite;
+}
+
+.linkIcon {
+	border: 1px solid white;
+	border-radius: 25%;
+	padding: 10px;
+	margin: 10px;
+	cursor: pointer;
+}
+.linkIcon:hover {
+	margin-bottom: 20px;
+	transition: 500ms;
 }
 @keyframes rotate {
 	from {

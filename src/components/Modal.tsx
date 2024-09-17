@@ -33,7 +33,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
 					onClick={() => onClose()}
 				>
 					<img
-                    className="rotate-svg"
+						className='rotate-svg'
 						src={Xcircle}
 						alt='Close icon'
 						width={25}

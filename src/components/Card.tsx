@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 interface CardProps {
 	title: string;
-	content: string;
+	icon: string;
 	onCardClick: () => void;
 }
-const Card: React.FC<CardProps> = ({ title, content, onCardClick }) => {
+const Card: React.FC<CardProps> = ({ title, icon, onCardClick }) => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -70,7 +70,10 @@ const Card: React.FC<CardProps> = ({ title, content, onCardClick }) => {
 			<div style={beforeStyle}></div>
 			<div className='card-content'>
 				<h3>{title}</h3>
-				<p>{content}</p>
+				<img
+					src={icon}
+					alt='icon'
+				/>
 			</div>
 		</div>
 	);

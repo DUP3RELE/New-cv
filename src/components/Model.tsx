@@ -8,7 +8,6 @@ export default function Model() {
 	const { nodes } = useGLTF("/models/torrus.glb");
 	const mesh = useRef<Mesh>(null);
 	const { viewport } = useThree();
-	console.log(nodes);
 
 	const torusMesh = nodes.Torus002 as Mesh;
 
