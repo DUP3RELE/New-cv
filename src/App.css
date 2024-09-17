@@ -153,16 +153,7 @@ html,
 	bottom: 0;
 	background-color: #fff;
 }
-.modal-container__2 {
-	background-color: gray;
-	margin: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 25px;
-	border: 1px solid black;
-	width: 30%;
-}
+.modal-container__2,
 .modal-container__3 {
 	background-color: gray;
 	margin: 15px;
@@ -173,12 +164,14 @@ html,
 	border: 1px solid black;
 	width: 30%;
 }
+
 .iconStyle {
 	padding: 2px;
 	margin: 5px;
 	border: 1px solid black;
+	box-shadow: 1px 1px 1px black;
 	border-radius: 5px;
-	background-color: whitesmoke;
+	background-color: white;
 }
 .rotate-svg {
 	animation: rotate 2s linear infinite;

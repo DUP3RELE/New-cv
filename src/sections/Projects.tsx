@@ -2,9 +2,12 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import Card from "../components/Card";
 import github from "../icons/github.svg";
+import github2 from "../icons/github copy.svg";
 import gastrohero from "../icons/trash.svg";
 import travelbuddy from "../icons/map.svg";
+import travelbuddy2 from "../icons/map.svg";
 import ripperdock from "../icons/dollar-sign.svg";
+import ripperdock2 from "../icons/dollar-sign copy.svg";
 import linkedin from "../icons/linkedin.svg";
 import typescript from "../icons/icons8-typescript.svg";
 import reactIcon from "../icons/react.svg";
@@ -64,16 +67,20 @@ export default function Projects() {
 				{ name: "React", icon: reactIcon },
 				{ name: "NextJS13", icon: nextjsIcon },
 				{ name: "MongoDB", icon: mongoDBIcon },
-				{ name: "Github", icon: github },
+				{ name: "Github", icon: github2 },
 				{ name: "Postman", icon: postmanIcon },
 				{ name: "VsStudio", icon: vsStudioIcon },
 			],
 			links: [
-				{ label: "GitHub", url: "https://github.com/project2", icon: github },
+				{
+					label: "GitHub",
+					url: "https://github.com/DUP3RELE/ripperdoc",
+					icon: github2,
+				},
 				{
 					label: "Live Demo",
-					url: "https://project2-demo.com",
-					icon: linkedin,
+					url: "https://ripperdoc.vercel.app/",
+					icon: ripperdock2,
 				},
 			],
 		},
@@ -87,7 +94,7 @@ export default function Projects() {
 				{ label: "GitHub", url: "https://github.com/project2", icon: github },
 				{
 					label: "Live Demo",
-					url: "https://project2-demo.com",
+					url: "https://travel-buddy-eight.vercel.app/",
 					icon: linkedin,
 				},
 			],
@@ -159,6 +166,7 @@ export default function Projects() {
 											rel='noopener noreferrer'
 										>
 											<img
+												className='iconStyle'
 												src={link.icon}
 												alt={link.label}
 												width={30}
