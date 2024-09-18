@@ -4,8 +4,9 @@ import Card from "../components/Card";
 import github from "../icons/github.svg";
 import github2 from "../icons/github copy.svg";
 import gastrohero from "../icons/trash.svg";
+import gastrohero2 from "../icons/trash copy.svg";
 import travelbuddy from "../icons/map.svg";
-import travelbuddy2 from "../icons/map.svg";
+import travelbuddy2 from "../icons/map copy.svg";
 import ripperdock from "../icons/dollar-sign.svg";
 import ripperdock2 from "../icons/dollar-sign copy.svg";
 import linkedin from "../icons/linkedin.svg";
@@ -49,11 +50,11 @@ export default function Projects() {
 				{ name: "TypeScript", icon: linkedin },
 			],
 			links: [
-				{ label: "GitHub", url: "https://github.com/project1", icon: github },
+				{ label: "GitHub", url: "https://github.com/project1", icon: github2 },
 				{
 					label: "Live Demo",
 					url: "https://project1-demo.com",
-					icon: linkedin,
+					icon: gastrohero2,
 				},
 			],
 		},
@@ -95,7 +96,7 @@ export default function Projects() {
 				{
 					label: "Live Demo",
 					url: "https://travel-buddy-eight.vercel.app/",
-					icon: linkedin,
+					icon: travelbuddy2,
 				},
 			],
 		},
@@ -105,20 +106,30 @@ export default function Projects() {
 		<section className='section projects'>
 			<h1 className='title1'>PROJEKTY</h1>
 			<div className='title2'>
-				<img
-					className='linkIcon'
-					src={github}
-					alt='github'
-					width={50}
-					height={50}
-				/>
-				<img
-					className='linkIcon'
-					src={linkedin}
-					alt='linkedin'
-					width={50}
-					height={50}
-				/>
+				<a
+					href='https://github.com/DUP3RELE?tab=overview&from=2024-09-01&to=2024-09-17'
+					target='_blank'
+				>
+					<img
+						className='linkIcon'
+						src={github}
+						alt='github'
+						width={50}
+						height={50}
+					/>
+				</a>
+				<a
+					href='https://www.linkedin.com/in/krystian-%C5%BCywczak-0152b0287/'
+					target='_blank'
+				>
+					<img
+						className='linkIcon'
+						src={linkedin}
+						alt='linkedin'
+						width={50}
+						height={50}
+					/>
+				</a>
 			</div>
 			<div id='cards'>
 				{cardData.map((data) => (
