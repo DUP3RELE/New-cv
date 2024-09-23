@@ -64,6 +64,10 @@ html,
 .secondary {
 	color: #3dc2ec;
 }
+.card {
+	-webkit-box-reflect: below 7px
+		linear-gradient(transparent, transparent 50%, #fff4 100%);
+}
 
 #cards {
 	display: flex;
