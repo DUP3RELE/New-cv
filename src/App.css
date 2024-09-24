@@ -56,7 +56,10 @@ html,
 }
 
 .contact {
-	background-color: #402e7a;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .primary {
 	color: #4b70f5;
@@ -196,6 +199,102 @@ html,
 	margin-bottom: 20px;
 	transition: 500ms;
 }
+
+.contact-container {
+	width: 50vw;
+}
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	color: white;
+	align-items: center;
+}
+.contact-label {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.contact-input {
+	margin-left: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+.textarea {
+	resize: none;
+}
+
+.contact-button {
+	width: 30%;
+	padding: 10px;
+	border: 2px solid white;
+	outline: none;
+	color: #fff;
+	background: black;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+}
+.contact-button:before {
+	content: "";
+	background: linear-gradient(
+		45deg,
+		#402e7a,
+		#3e2055,
+		#1125ac,
+		#631187,
+		#00ffd5,
+		#5b42f3,
+		#7a00ff,
+		#c6c8cb,
+		#4b70f5
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+.contact-button:hover:before {
+	opacity: 1;
+}
+
+.contact-button:after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+	background: transparent;
+}
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
 @keyframes rotate {
 	from {
 		transform: rotate(0deg);

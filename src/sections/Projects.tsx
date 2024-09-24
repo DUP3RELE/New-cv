@@ -20,6 +20,7 @@ import pythonIcon from "../icons/python-brands-solid.svg";
 import flaskIcon from "../icons/Flask.svg";
 import pcIcon from "../icons/PyCharm.svg";
 import gearIcon from "../icons/gear-solid.svg";
+import jsIcon from "../icons/js.svg"
 interface CardData {
 	id: number;
 	title: string;
@@ -112,10 +113,18 @@ export default function Projects() {
 			title: "TravelBuddy",
 			icon: travelbuddy,
 			description:
-				"Aplikacja służąca do tworzenia notatek, użytkownik może przeglądać, dodawać i usuwać notki.",
-			technologies: [{ name: "Node.js", icon: github }],
+				"Aplikacja do zarządzania notatkami, umożliwiająca użytkownikom przeglądanie, dodawanie oraz usuwanie notatek.",
+			technologies: [
+				{ name: "Javascript", icon: jsIcon },
+				{ name: "React", icon: reactIcon },
+				{ name: "NextJS13", icon: nextjsIcon },
+				{ name: "MongoDB", icon: mongoDBIcon },
+				{ name: "Github", icon: github2 },
+				{ name: "Postman", icon: postmanIcon },
+				{ name: "VsStudio", icon: vsStudioIcon },
+			],
 			links: [
-				{ label: "GitHub", url: "https://github.com/project2", icon: github },
+				{ label: "GitHub", url: "https://github.com/project2", icon: github2 },
 				{
 					label: "Live Demo",
 					url: "https://travel-buddy-eight.vercel.app/",
