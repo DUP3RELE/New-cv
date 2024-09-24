@@ -16,6 +16,10 @@ import nextjsIcon from "../icons/icons8-nextjs.svg";
 import mongoDBIcon from "../icons/mongodb-icon.svg";
 import postmanIcon from "../icons/icons8-postman-api.svg";
 import vsStudioIcon from "../icons/icons8-visual-studio.svg";
+import pythonIcon from "../icons/python-brands-solid.svg";
+import flaskIcon from "../icons/Flask.svg";
+import pcIcon from "../icons/PyCharm.svg";
+import gearIcon from "../icons/gear-solid.svg";
 interface CardData {
 	id: number;
 	title: string;
@@ -44,13 +48,30 @@ export default function Projects() {
 			id: 1,
 			title: "GastroHero",
 			icon: gastrohero,
-			description: "Opis projektu 1 - to jest przykładowy projekt.",
+			description:
+				"Mój najbardziej ambitny projekt. Aplikacja, która służy do zarządzania restauracją. Można w niej tworzyć konta użytkowników - konto restauracji i konto pracowników. ",
 			technologies: [
-				{ name: "React", icon: github },
-				{ name: "TypeScript", icon: linkedin },
+				{ name: "React", icon: reactIcon },
+				{ name: "TypeScript", icon: typescript },
+				{ name: "NextJS13", icon: nextjsIcon },
+				{ name: "Github", icon: github2 },
+				{ name: "Postman", icon: postmanIcon },
+				{ name: "VsStudio", icon: vsStudioIcon },
+				{ name: "PyCharm", icon: pcIcon },
+				{ name: "Python", icon: pythonIcon },
+				{ name: "Python Flask", icon: flaskIcon },
 			],
 			links: [
-				{ label: "GitHub", url: "https://github.com/project1", icon: github2 },
+				{
+					label: "GitHub Frontend code",
+					url: "https://github.com/DUP3RELE/GastroHero",
+					icon: github2,
+				},
+				{
+					label: "GitHub Backend code",
+					url: "https://github.com/DUP3RELE/HotpotEngine",
+					icon: gearIcon,
+				},
 				{
 					label: "Live Demo",
 					url: "https://project1-demo.com",
@@ -62,7 +83,8 @@ export default function Projects() {
 			id: 2,
 			title: "Ripperdock shop",
 			icon: ripperdock,
-			description: "Opis projektu 2 - drugi przykładowy projekt.",
+			description:
+				"Sklep internetowy oferujący cybernetyczne wszczepy, utrzymany w klimacie cyberpunkowym. Strona została zbudowana w technologii Next.js i hostowana na Vercelu, z backendem opartym na MongoDB. Użytkownicy mogą tworzyć konta, dodawać produkty do koszyka, a także zarządzać swoimi zamówieniami. Administrator, po zalogowaniu, ma możliwość zarządzania asortymentem sklepu, mogą dodawać, edytować oraz usuwać produkty.",
 			technologies: [
 				{ name: "Typescript", icon: typescript },
 				{ name: "React", icon: reactIcon },
@@ -89,7 +111,8 @@ export default function Projects() {
 			id: 3,
 			title: "TravelBuddy",
 			icon: travelbuddy,
-			description: "Opis projektu 2 - drugi przykładowy projekt.",
+			description:
+				"Aplikacja służąca do tworzenia notatek, użytkownik może przeglądać, dodawać i usuwać notki.",
 			technologies: [{ name: "Node.js", icon: github }],
 			links: [
 				{ label: "GitHub", url: "https://github.com/project2", icon: github },
@@ -109,6 +132,7 @@ export default function Projects() {
 				<a
 					href='https://github.com/DUP3RELE?tab=overview&from=2024-09-01&to=2024-09-17'
 					target='_blank'
+					title='Strona Github'
 				>
 					<img
 						className='linkIcon'
@@ -121,6 +145,7 @@ export default function Projects() {
 				<a
 					href='https://www.linkedin.com/in/krystian-%C5%BCywczak-0152b0287/'
 					target='_blank'
+					title='Strona linedin'
 				>
 					<img
 						className='linkIcon'
@@ -154,11 +179,12 @@ export default function Projects() {
 						</div>
 						<div className='second-third-wrapper'>
 							<div className='modal-container__2'>
-								<h4>Technologie:</h4>
+								<h4>Użyte technologie:</h4>
 								<div>
 									{selectedCard.technologies.map((tech) => (
 										<img
 											className='iconStyle'
+											title={tech.name}
 											src={tech.icon}
 											alt={tech.name}
 											width={30}
@@ -180,6 +206,7 @@ export default function Projects() {
 												className='iconStyle'
 												src={link.icon}
 												alt={link.label}
+												title={link.label}
 												width={30}
 												height={30}
 											/>
