@@ -28,6 +28,17 @@ html,
 	background: linear-gradient(to bottom, black, #080521);
 }
 
+.divider2 {
+	height: 20vh;
+	width: 100%;
+	background: linear-gradient(to bottom, #080521, black);
+}
+.divider3 {
+	height: 20vh;
+	width: 100%;
+	background: linear-gradient(to bottom, black, #190f74);
+}
+
 .title1 {
 	position: absolute;
 	color: white;
@@ -60,6 +71,10 @@ html,
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.footer {
+	color: white;
+	background-color: #190f74;
 }
 .primary {
 	color: #4b70f5;
