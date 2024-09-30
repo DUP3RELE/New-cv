@@ -1,4 +1,5 @@
 import ContactForm from "../components/ContactForm";
+import ContactInfo from "../components/ContactInfo";
 
 export default function Contact() {
 	return (
@@ -8,7 +9,9 @@ export default function Contact() {
 			<div className='contact-container'>
 				<ContactForm />
 			</div>
-			<div className='contact-container'></div>
+			<div className='contact-container'>
+				<ContactInfo />
+			</div>
 		</div>
 	);
 }
