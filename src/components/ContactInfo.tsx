@@ -11,11 +11,20 @@ export default function ContactInfo() {
 			</div>
 			<div className='contact-box'>
 				<div className='glowing-element'></div>
-				<div className='info-element'><a href="">Linkedin</a></div>
+				<div className='info-element'>
+					<a href=''>Linkedin</a>
+				</div>
 			</div>
 			<div className='contact-box'>
 				<div className='glowing-element'></div>
-				<div className='info-element'><a href="">Github</a></div>
+				<div className='info-element'>
+					<a
+						href='https://github.com/DUP3RELE'
+						target='_blank'
+					>
+						Github
+					</a>
+				</div>
 			</div>
 		</div>
 	);
