@@ -75,6 +75,7 @@ html,
 .footer {
 	color: white;
 	background-color: #190f74;
+	z-index: -1;
 }
 .primary {
 	color: #4b70f5;
@@ -328,7 +329,6 @@ html,
 	background-color: black;
 	position: relative;
 	z-index: 0;
-	overflow: hidden;
 }
 .glowing-background:before {
 	content: "";
@@ -352,7 +352,7 @@ html,
 	filter: blur(15px);
 	width: 100%;
 	height: 200%;
-	border-radius: 25%;
+	border-radius: 40%;
 	top: -50%;
 	left: -50%;
 	transform: rotate(30deg);
@@ -396,6 +396,9 @@ html,
 	font-weight: bold;
 	color: white;
 	font-size: 22px;
+}
+.link-element {
+	color: white;
 }
 @keyframes glowing {
 	0% {

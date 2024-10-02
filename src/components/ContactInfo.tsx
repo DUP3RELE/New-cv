@@ -12,7 +12,13 @@ export default function ContactInfo() {
 			<div className='contact-box'>
 				<div className='glowing-element'></div>
 				<div className='info-element'>
-					<a href=''>Linkedin</a>
+					<a
+						href='https://www.linkedin.com/in/krystian-%C5%BCywczak-0152b0287/'
+						target='_blank'
+						className='link-element'
+					>
+						Linkedin
+					</a>
 				</div>
 			</div>
 			<div className='contact-box'>
@@ -21,6 +27,7 @@ export default function ContactInfo() {
 					<a
 						href='https://github.com/DUP3RELE'
 						target='_blank'
+						className='link-element'
 					>
 						Github
 					</a>
