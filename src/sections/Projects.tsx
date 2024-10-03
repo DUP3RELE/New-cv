@@ -20,7 +20,7 @@ import pythonIcon from "../icons/python-brands-solid.svg";
 import flaskIcon from "../icons/Flask.svg";
 import pcIcon from "../icons/PyCharm.svg";
 import gearIcon from "../icons/gear-solid.svg";
-import jsIcon from "../icons/js.svg"
+import jsIcon from "../icons/js.svg";
 interface CardData {
 	id: number;
 	title: string;
@@ -141,27 +141,25 @@ export default function Projects() {
 				<a
 					href='https://github.com/DUP3RELE?tab=overview&from=2024-09-01&to=2024-09-17'
 					target='_blank'
+					rel="noreferrer"
 					title='Strona Github'
 				>
 					<img
 						className='linkIcon'
 						src={github}
 						alt='github'
-						width={50}
-						height={50}
 					/>
 				</a>
 				<a
 					href='https://www.linkedin.com/in/krystian-%C5%BCywczak-0152b0287/'
 					target='_blank'
+					rel="noreferrer"
 					title='Strona linedin'
 				>
 					<img
 						className='linkIcon'
 						src={linkedin}
 						alt='linkedin'
-						width={50}
-						height={50}
 					/>
 				</a>
 			</div>

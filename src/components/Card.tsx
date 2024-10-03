@@ -30,8 +30,6 @@ const Card: React.FC<CardProps> = ({ title, icon, onCardClick }) => {
 		justifyContent: "center",
 		alignItems: "center",
 		display: "flex",
-		width: "300px",
-		height: "260px",
 		color: "white",
 		backgroundImage: "linear-gradient(144deg,#402e7a, #5B42F3 50%,#4b70f5)",
 		borderRadius: "10px",
