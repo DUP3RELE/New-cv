@@ -25,18 +25,15 @@ html,
 
 .divider1 {
 	height: 15vh;
-
 	background: linear-gradient(to bottom, black, #080521);
 }
 
 .divider2 {
 	height: 15vh;
-
 	background: linear-gradient(to bottom, #080521, black);
 }
 .divider3 {
 	height: 15vh;
-
 	background: linear-gradient(to bottom, black, #190f74);
 }
 
@@ -56,9 +53,6 @@ html,
 }
 .home {
 	background-color: black;
-}
-.canvas {
-	scale: 2;
 }
 .projects {
 	display: flex;
@@ -170,6 +164,7 @@ html,
 .second-third-wrapper {
 	display: flex;
 	position: absolute;
+	justify-content: space-evenly;
 	width: 85%;
 	margin: 5px;
 	bottom: 0;
@@ -418,22 +413,107 @@ html,
 		transform: rotate(360deg);
 	}
 }
-@media (min-width: 600px) {
-	.modal-container {
+
+@media (min-width: 768px) {
+	.divider1 {
+		height: 20vh;
+	}
+
+	.divider2 {
+		height: 20vh;
+	}
+	.divider3 {
+		height: 20vh;
+	}
+
+	.title1 {
+		font-size: 40px;
+		top: 50px;
+		left: 100px;
+	}
+	.title2 {
+		font-size: 40px;
+		bottom: 50px;
+		right: 100px;
+	}
+	.contact {
 		flex-direction: row;
 	}
-
-	.modal-container__2,
-	.modal-container__3 {
-		display: inline-block;
-		width: 50%;
-		vertical-align: top;
+	.card {
+		width: 300px;
+		height: 300px;
 	}
-}
 
-@media (max-width: 600px) {
+	#cards {
+		justify-content: space-around;
+		flex-direction: row;
+		gap: 10px;
+		min-width: 916px;
+		width: calc(100% - 20px);
+	}
+
+	.modal-content {
+		width: 80%;
+		height: 80%;
+	}
+
+	.modal-close-button {
+		scale: 1;
+	}
+
+	.modal-container__1 {
+		margin: 5px;
+		padding: 15px;
+		font-size: 18px;
+		text-align: left;
+	}
+	.second-third-wrapper {
+		width: 95%;
+		margin-bottom: 25px;
+	}
 	.modal-container__2,
 	.modal-container__3 {
-		width: 100%;
+		font-size: 16px;
+		margin: 10px;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+	}
+
+	.iconStyle {
+		padding: 2px;
+		margin: 5px;
+	}
+
+	.linkIcon {
+		width: 60px;
+		height: 60px;
+	}
+
+	.contact-container {
+		width: 50vw;
+		margin-top: 20px;
+	}
+	.glowing-element {
+		width: 30px;
+		height: 30px;
+		position: relative;
+	}
+	.glowing-background:before {
+		height: 200%;
+		border-radius: 40%;
+		top: -50%;
+	}
+	.contact-info {
+		margin-left: 50px;
+	}
+	.contact-box {
+		justify-content: left;
+		align-items: center;
+		margin: 10px;
+	}
+	.info-element {
+		margin: 15px;
+		font-size: 22px;
 	}
 }

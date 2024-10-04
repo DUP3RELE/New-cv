@@ -420,22 +420,3 @@ html,
 		transform: rotate(360deg);
 	}
 }
-@media (min-width: 600px) {
-	.modal-container {
-		flex-direction: column;
-	}
-
-	.modal-container__2,
-	.modal-container__3 {
-		display: inline-block;
-		width: 50%;
-		vertical-align: top;
-	}
-}
-
-@media (max-width: 600px) {
-	.modal-container__2,
-	.modal-container__3 {
-		width: 100%;
-	}
-}
