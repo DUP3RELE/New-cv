@@ -1,13 +1,13 @@
 import { useGLTF, Text, MeshTransmissionMaterial } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-import { useRef } from "react";
-import { useControls } from "leva";
+import { useEffect, useRef, useState } from "react";
 
 export default function Model() {
 	const { nodes } = useGLTF("/models/torrus.glb");
 	const mesh = useRef<Mesh>(null);
 	const { viewport } = useThree();
+	const [scaleFactor, setScaleFactor] = useState(viewport.width / 1.5);
 
 	const torusMesh = nodes.Torus002 as Mesh;
 
@@ -26,8 +26,24 @@ export default function Model() {
 		backside: true,
 	};
 
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+		const updateScale = () => {
+			const newScaleFactor = mediaQuery.matches ? 1.5 : 3.5;
+			setScaleFactor(viewport.width / newScaleFactor);
+		};
+
+		updateScale();
+
+		mediaQuery.addEventListener("change", updateScale);
+
+		return () => {
+			mediaQuery.removeEventListener("change", updateScale);
+		};
+	}, [viewport.width]);
 	return (
-		<group scale={viewport.width / 3.5}>
+		<group scale={scaleFactor}>
 			<Text
 				font={"/font/Nunito-VariableFont_wght.ttf"}
 				position={[0, 0, -1]}
