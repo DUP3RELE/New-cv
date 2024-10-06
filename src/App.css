@@ -72,6 +72,7 @@ html,
 	color: white;
 	background-color: #190f74;
 	z-index: -1;
+	display: flex;
 }
 
 .card {
@@ -392,6 +393,25 @@ html,
 }
 .link-element {
 	color: white;
+}
+.left-half-footer {
+	background-color: rgb(0, 247, 255);
+	width: 50%;
+	height: 100%;
+	border-bottom-left-radius: 30%;
+}
+.right-half-footer {
+	background-color: blue;
+	width: 50%;
+	height: 100%;
+	border-bottom-right-radius: 30%;
+}
+.footer-text {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #080521;
 }
 @keyframes glowing {
 	0% {
