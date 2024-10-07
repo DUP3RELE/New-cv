@@ -4,7 +4,7 @@ html,
 .App {
 	margin: 0;
 	padding: 0;
-	height: 100%;
+	height: 100vh;
 	max-width: 100vw;
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll hidden;
@@ -41,15 +41,15 @@ html,
 	position: absolute;
 	color: white;
 	font-size: 2, 5rem;
-	top: 15px;
 	font-weight: 200;
+	top: 50px;
 }
 .title2 {
 	position: absolute;
 	color: white;
 	font-size: 2, 5rem;
-	bottom: 15px;
 	font-weight: 200;
+	bottom: 50px;
 }
 .home {
 	background-color: black;
@@ -71,7 +71,7 @@ html,
 .footer {
 	color: white;
 	background-color: #190f74;
-	z-index: -1;
+	z-index: 1;
 	display: flex;
 }
 
@@ -202,7 +202,7 @@ html,
 	padding: 10px;
 	width: 25px;
 	height: 25px;
-	margin: 10px;
+	margin: 0 10px;
 	cursor: pointer;
 }
 .linkIcon:hover {
@@ -395,16 +395,14 @@ html,
 	color: white;
 }
 .left-half-footer {
-	background-color: rgb(0, 247, 255);
+	background-color: rgb(36, 34, 53);
 	width: 50%;
 	height: 100%;
-	border-bottom-left-radius: 30%;
 }
 .right-half-footer {
 	background-color: blue;
 	width: 50%;
 	height: 100%;
-	border-bottom-right-radius: 30%;
 }
 .footer-text {
 	position: absolute;
@@ -412,6 +410,29 @@ html,
 	align-items: center;
 	font-weight: bold;
 	text-shadow: 2px 2px 2px #080521;
+	z-index: 2;
+}
+.smileIcon {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width: 125px;
+	height: 125px;
+	color: orange;
+	animation: rotate 2s linear infinite;
+}
+.footer-link-box {
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.footer-links {
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
 }
 @keyframes glowing {
 	0% {
@@ -448,12 +469,10 @@ html,
 
 	.title1 {
 		font-size: 40px;
-		top: 50px;
 		left: 100px;
 	}
 	.title2 {
 		font-size: 40px;
-		bottom: 50px;
 		right: 100px;
 	}
 	.contact {
@@ -535,5 +554,34 @@ html,
 	.info-element {
 		margin: 15px;
 		font-size: 22px;
+	}
+	.left-half-footer {
+		border-bottom-left-radius: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		z-index: 1;
+	}
+	.right-half-footer {
+		border-bottom-right-radius: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		z-index: 1;
+	}
+	.footer-link-box {
+		position: relative;
+		bottom: 100px;
+		left: 0;
+	}
+	.footer-links {
+		font-size: 28px;
+		cursor: pointer;
+		margin: 10px;
+	}
+	.smileIcon {
+		bottom: 100px;
+		position: relative;
+		align-items: center;
 	}
 }
