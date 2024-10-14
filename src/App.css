@@ -455,6 +455,23 @@ html,
 	}
 }
 
+.card-1::before {
+	background: linear-gradient(
+		98.3deg,
+		rgb(0, 0, 0) 10.6%,
+		rgb(255, 0, 0) 97.7%
+	);
+	content: "WORK IN PROGRESS";
+	color: rgb(142, 142, 142);
+	font-size: 36px;
+	justify-content: center;
+	height: 100%;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	transition: opacity 500ms;
+	width: 100%;
+}
 @media (min-width: 768px) {
 	.divider1 {
 		height: 20vh;

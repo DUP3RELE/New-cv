@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { CardData, cardData } from "./CardData";
 
 interface CardProps {
+	id: number;
 	title: string;
 	icon: string;
 	onCardClick: () => void;
+	className?: string;
 }
-const Card: React.FC<CardProps> = ({ title, icon, onCardClick }) => {
+const Card: React.FC<CardProps> = ({ id, title, icon, onCardClick }) => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -58,11 +61,11 @@ const Card: React.FC<CardProps> = ({ title, icon, onCardClick }) => {
 
 	return (
 		<div
-			className='card'
 			onMouseMove={handleMouseMove}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			style={cardStyle}
+			className={`card card-${id}`}
 			onClick={onCardClick}
 		>
 			<div style={beforeStyle}></div>
